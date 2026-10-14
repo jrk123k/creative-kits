@@ -1,0 +1,39 @@
+# Bridge alternative: the future plate large on the left, then and now stacked.
+output:
+  width: 1920
+  height: 1080
+  fps: 24
+  duration: 8
+
+layout: one-plus-two
+
+one_plus_two:
+  primary: left
+  primary_ratio: 0.55
+
+divider:
+  px: 8
+  color: "101820"
+
+labels:
+  show: true
+  size: 36
+  position: top
+
+audio:
+  from: file
+  path: clips/mix.wav
+
+panels:
+  - src: clips/future.mp4
+    label: "FUTURE"
+    look: none
+  - src: clips/then.mp4
+    label: "1984"
+    look: c64
+    palette: colodore
+    dither: bayer
+  - src: clips/now.mp4
+    label: "2026"
+    look: pixelate
+    pixel_scale: 8

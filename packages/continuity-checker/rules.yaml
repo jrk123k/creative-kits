@@ -1,0 +1,504 @@
+version: 1
+descriptions:
+  hero_id_v1: Hero, a lean young man in his mid-twenties, clean-shaven, with dark
+    brown wavy hair curling out under a grey flat tweed newsboy cap. Wide toothy grin,
+    dark brows, warm brown eyes. Cream linen shirt with the sleeves rolled to the
+    forearm, open collar, grey-brown suspenders, dark brown wool trousers.
+  sweetheart_id_v1: Sweetheart, a slender flapper in her mid-twenties with a glossy
+    black chin-length bob, blunt bangs and a sleek curl at each cheek. Pale skin,
+    smoky dark eye makeup, deep red lips, a cool level gaze. Emerald-green beaded
+    drop-waist sleeveless dress with gold Art Deco chevrons, emerald felt cloche with
+    a gold-and-green feather brooch, long pearl ropes, emerald bracelet, gold beaded
+    clutch.
+  rube_id_v1: Rube, a gangly man around thirty with a long face, dark hair and a waxed
+    handlebar mustache. Black bowler hat, bright royal-blue pinstripe suit, white
+    shirt with an open collar and no tie, scuffed brown lace-up boots. He clutches
+    an overflowing cardboard box of loose papers and moves with an awkward, stumbling,
+    knock-kneed posture.
+  florist_id_v1: Florist, a kindly man in his late sixties with neat swept-back silver-grey
+    hair, wire-rimmed round glasses and a gentle closed smile. Pale yellow button
+    shirt, maroon bow tie, long tan canvas work apron with a chest pocket holding
+    a pencil.
+  boss_id_v1: Boss, a heavyset, scowling man in his sixties with a deeply lined face,
+    thick grey brows, a grey bristly mustache and a receding grey hairline. Translucent
+    green eyeshade visor, white shirt with the sleeves rolled up, charcoal tweed vest,
+    navy tie, an unlit cigar clamped in the corner of his mouth, a fountain pen in
+    hand.
+  nova_look_v1: grey-skinned alien woman, long straight silver hair, large black eyes,
+    inverted-triangle forehead mark, silver metallic bodysuit with an inverted-triangle
+    chest emblem, belt with an X-buckle
+  diva_offstage_v1: Black woman, warm honey complexion, deep brown eyes, warm genuine
+    smile, jet-black glossy hair in a deep side part with soft Hollywood waves to
+    the shoulders, small diamond stud earrings
+rules:
+- id: harbor-hero-id-imagine
+  type: required_verbatim
+  severity: error
+  title: Hero identity in Imagine prompt
+  source: harbor-waltz/bible
+  scope:
+    projects:
+    - harbor-waltz
+    globs:
+    - '**/TEST_PROMPTS*'
+    - '**/*prompt*'
+  name: Hero
+  text: Hero, a lean young man in his mid-twenties, clean-shaven, with dark brown
+    wavy hair curling out under a grey flat tweed newsboy cap. Wide toothy grin, dark
+    brows, warm brown eyes. Cream linen shirt with the sleeves rolled to the forearm,
+    open collar, grey-brown suspenders, dark brown wool trousers.
+  suggested_fix: Paste the locked block.
+- id: harbor-sweetheart-id-imagine
+  type: required_verbatim
+  severity: error
+  title: Sweetheart identity in Imagine prompt
+  source: harbor-waltz/bible
+  scope:
+    projects:
+    - harbor-waltz
+    globs:
+    - '**/TEST_PROMPTS*'
+    - '**/*prompt*'
+  name: Sweetheart
+  text: Sweetheart, a slender flapper in her mid-twenties with a glossy black chin-length
+    bob, blunt bangs and a sleek curl at each cheek. Pale skin, smoky dark eye makeup,
+    deep red lips, a cool level gaze. Emerald-green beaded drop-waist sleeveless dress
+    with gold Art Deco chevrons, emerald felt cloche with a gold-and-green feather
+    brooch, long pearl ropes, emerald bracelet, gold beaded clutch.
+  suggested_fix: Paste the locked block.
+- id: harbor-rube-id-imagine
+  type: required_verbatim
+  severity: error
+  title: Rube identity in Imagine prompt
+  source: harbor-waltz/bible
+  scope:
+    projects:
+    - harbor-waltz
+    globs:
+    - '**/TEST_PROMPTS*'
+    - '**/*prompt*'
+  name: Rube
+  text: Rube, a gangly man around thirty with a long face, dark hair and a waxed handlebar
+    mustache. Black bowler hat, bright royal-blue pinstripe suit, white shirt with
+    an open collar and no tie, scuffed brown lace-up boots. He clutches an overflowing
+    cardboard box of loose papers and moves with an awkward, stumbling, knock-kneed
+    posture.
+  suggested_fix: Paste the locked block.
+- id: harbor-florist-id-imagine
+  type: required_verbatim
+  severity: error
+  title: Florist identity in Imagine prompt
+  source: harbor-waltz/bible
+  scope:
+    projects:
+    - harbor-waltz
+    globs:
+    - '**/TEST_PROMPTS*'
+    - '**/*prompt*'
+  name: Florist
+  text: Florist, a kindly man in his late sixties with neat swept-back silver-grey
+    hair, wire-rimmed round glasses and a gentle closed smile. Pale yellow button
+    shirt, maroon bow tie, long tan canvas work apron with a chest pocket holding
+    a pencil.
+  suggested_fix: Paste the locked block.
+- id: harbor-boss-id-imagine
+  type: required_verbatim
+  severity: error
+  title: Boss identity in Imagine prompt
+  source: harbor-waltz/bible
+  scope:
+    projects:
+    - harbor-waltz
+    globs:
+    - '**/TEST_PROMPTS*'
+    - '**/*prompt*'
+  name: Boss
+  text: Boss, a heavyset, scowling man in his sixties with a deeply lined face, thick
+    grey brows, a grey bristly mustache and a receding grey hairline. Translucent
+    green eyeshade visor, white shirt with the sleeves rolled up, charcoal tweed vest,
+    navy tie, an unlit cigar clamped in the corner of his mouth, a fountain pen in
+    hand.
+  suggested_fix: Paste the locked block.
+- id: harbor-hero-id-shotlist
+  type: required_verbatim
+  severity: warning
+  title: Hero identity on shot-list cell
+  source: harbor-waltz/bible
+  scope:
+    projects:
+    - harbor-waltz
+    globs:
+    - '**/SHOTLIST*'
+  name: Hero
+  text: Hero, a lean young man in his mid-twenties, clean-shaven, with dark brown
+    wavy hair curling out under a grey flat tweed newsboy cap. Wide toothy grin, dark
+    brows, warm brown eyes. Cream linen shirt with the sleeves rolled to the forearm,
+    open collar, grey-brown suspenders, dark brown wool trousers.
+  suggested_fix: Paste the locked block.
+- id: harbor-sweetheart-id-shotlist
+  type: required_verbatim
+  severity: warning
+  title: Sweetheart identity on shot-list cell
+  source: harbor-waltz/bible
+  scope:
+    projects:
+    - harbor-waltz
+    globs:
+    - '**/SHOTLIST*'
+  name: Sweetheart
+  text: Sweetheart, a slender flapper in her mid-twenties with a glossy black chin-length
+    bob, blunt bangs and a sleek curl at each cheek. Pale skin, smoky dark eye makeup,
+    deep red lips, a cool level gaze. Emerald-green beaded drop-waist sleeveless dress
+    with gold Art Deco chevrons, emerald felt cloche with a gold-and-green feather
+    brooch, long pearl ropes, emerald bracelet, gold beaded clutch.
+  suggested_fix: Paste the locked block.
+- id: harbor-boss-vest-charcoal
+  type: term_lock
+  severity: warning
+  title: Boss vest charcoal
+  scope:
+    projects:
+    - harbor-waltz
+  prefer: charcoal
+  reject:
+  - grey vest
+  - gray vest
+  suggested_fix: Use the preferred term.
+- id: harbor-florist-silver
+  type: term_lock
+  severity: warning
+  title: Florist silver-grey hair
+  scope:
+    projects:
+    - harbor-waltz
+  prefer: silver-grey
+  reject:
+  - grey-haired
+  - gray-haired
+  suggested_fix: Use the preferred term.
+- id: harbor-sweetheart-cloche
+  type: term_lock
+  severity: warning
+  title: Emerald felt cloche
+  scope:
+    projects:
+    - harbor-waltz
+  prefer: emerald felt
+  reject:
+  - green feathered
+  - feathered green
+  suggested_fix: Use the preferred term.
+- id: harbor-no-bottles
+  type: forbidden_in_context
+  severity: warning
+  title: No bottles
+  scope:
+    projects:
+    - harbor-waltz
+  terms:
+  - bottle
+  - bottles
+  - beer
+  - whisky
+  - wine
+  suggested_fix: Remove the banned term.
+- id: harbor-no-phones
+  type: forbidden_in_context
+  severity: info
+  title: No modern phones
+  scope:
+    projects:
+    - harbor-waltz
+  terms:
+  - smartphone
+  - iphone
+  suggested_fix: Remove the banned term.
+- id: harbor-cream-shirt
+  type: term_lock
+  severity: info
+  title: Cream shirt
+  scope:
+    projects:
+    - harbor-waltz
+  prefer: cream
+  reject:
+  - white dress shirt
+  suggested_fix: Use the preferred term.
+- id: harbor-newsboy-cap
+  type: term_lock
+  severity: info
+  title: Newsboy cap
+  scope:
+    projects:
+    - harbor-waltz
+  prefer: newsboy
+  reject:
+  - baseball
+  - trucker
+  suggested_fix: Use the preferred term.
+- id: nova-look-v1
+  type: required_verbatim
+  severity: error
+  title: Nova look line
+  source: nova-pixel/bible
+  scope:
+    projects:
+    - nova-pixel
+  name: Look
+  text: grey-skinned alien woman, long straight silver hair, large black eyes, inverted-triangle
+    forehead mark, silver metallic bodysuit with an inverted-triangle chest emblem,
+    belt with an X-buckle
+  suggested_fix: Paste the locked block.
+  where: file
+- id: nova-gown-not-canon
+  type: forbidden_in_context
+  severity: error
+  title: No gown
+  scope:
+    projects:
+    - nova-pixel
+  terms:
+  - gown
+  - gowns
+  suggested_fix: Remove the banned term.
+- id: nova-voice-temperature
+  type: custom
+  severity: warning
+  title: Voice temperature
+  pattern: temperature\s*[:=]?\s*(?!0\.5\b)\d
+  suggested_fix: Keep temperature at 0.5.
+  scope:
+    projects:
+    - nova-pixel
+- id: nova-voice-exaggeration
+  type: custom
+  severity: warning
+  title: Voice exaggeration
+  pattern: exaggeration\s*[:=]?\s*(?!0\.3\b)\d
+  suggested_fix: Keep exaggeration at 0.3.
+  scope:
+    projects:
+    - nova-pixel
+- id: nova-voice-cfg
+  type: custom
+  severity: warning
+  title: Voice cfg
+  pattern: cfg\s*[:=]?\s*(?!0\.5\b)\d
+  suggested_fix: Keep cfg at 0.5.
+  scope:
+    projects:
+    - nova-pixel
+- id: nova-no-laser-sword
+  type: forbidden_in_context
+  severity: warning
+  title: No laser sword
+  scope:
+    projects:
+    - nova-pixel
+  terms:
+  - laser sword
+  suggested_fix: Remove the banned term.
+- id: nova-silver-hair
+  type: term_lock
+  severity: info
+  title: Silver hair
+  scope:
+    projects:
+    - nova-pixel
+  prefer: silver
+  reject:
+  - blonde
+  - blond
+  suggested_fix: Use the preferred term.
+- id: diva-offstage-look
+  type: required_verbatim
+  severity: warning
+  title: Diva offstage look
+  source: veloria-show/bible
+  scope:
+    projects:
+    - veloria-show
+  name: Imagine-ready
+  text: Black woman, warm honey complexion, deep brown eyes, warm genuine smile, jet-black
+    glossy hair in a deep side part with soft Hollywood waves to the shoulders, small
+    diamond stud earrings
+  suggested_fix: Paste the locked block.
+  where: file
+- id: colin-figment-wardrobe
+  type: term_lock
+  severity: warning
+  title: Colin wardrobe
+  scope:
+    projects:
+    - veloria-show
+  prefer: navy blazer
+  reject:
+  - white-tie
+  - tuxedo
+  suggested_fix: Use the preferred term.
+- id: sarah-ashford-wardrobe
+  type: term_lock
+  severity: warning
+  title: Sarah wardrobe
+  scope:
+    projects:
+    - veloria-show
+  prefer: charcoal suit
+  reject:
+  - red jacket
+  suggested_fix: Use the preferred term.
+- id: ban-sphero-in-news
+  type: forbidden_in_context
+  severity: error
+  title: No Sphero in news
+  scope:
+    projects:
+    - veloria-show
+    globs:
+    - '**/*news*'
+  terms:
+  - Sphero
+  suggested_fix: Remove the banned term.
+- id: veloria-no-sold-out-banner
+  type: forbidden_in_context
+  severity: info
+  title: No sold-out banner
+  scope:
+    projects:
+    - veloria-show
+  terms:
+  - sold-out banner
+  - sold out banner
+  suggested_fix: Remove the banned term.
+- id: veloria-diamond-studs
+  type: term_lock
+  severity: info
+  title: Diamond studs
+  scope:
+    projects:
+    - veloria-show
+  prefer: diamond stud
+  reject:
+  - hoop
+  - chandelier
+  suggested_fix: Use the preferred term.
+- id: spell-colin-figment
+  type: name_spelling
+  severity: error
+  title: Spell Colin Figment
+  canonical: Colin Figment
+  misspellings:
+  - Colin Figmant
+  - Collin Figment
+  suggested_fix: Colin Figment
+- id: spell-sarah-ashford
+  type: name_spelling
+  severity: error
+  title: Spell Sarah Ashford
+  canonical: Sarah Ashford
+  misspellings:
+  - Sara Ashford
+  - Sarah Ashforde
+  suggested_fix: Sarah Ashford
+- id: spell-veloria
+  type: name_spelling
+  severity: error
+  title: Spell Veloria
+  canonical: Veloria
+  misspellings:
+  - Valoria
+  - Veloriaa
+  suggested_fix: Veloria
+- id: spell-harbor-waltz
+  type: name_spelling
+  severity: warning
+  title: Spell Harbor Waltz
+  canonical: Harbor Waltz
+  misspellings:
+  - Harbour Waltz
+  - Harbor-Waltz
+  suggested_fix: Harbor Waltz
+- id: spell-nova-pixel
+  type: name_spelling
+  severity: warning
+  title: Spell Nova Pixel
+  canonical: Nova Pixel
+  misspellings:
+  - NovaPixels
+  - Nova-Pixel
+  suggested_fix: Nova Pixel
+- id: spell-art-deco
+  type: name_spelling
+  severity: info
+  title: Spell Art Deco
+  canonical: Art Deco
+  misspellings:
+  - Artdeco
+  - Art-Deco
+  suggested_fix: Art Deco
+- id: spell-hero
+  type: name_spelling
+  severity: info
+  title: Spell Hero
+  canonical: Hero
+  misspellings:
+  - Heros
+  - Héro
+  suggested_fix: Hero
+- id: spell-sweetheart
+  type: name_spelling
+  severity: info
+  title: Spell Sweetheart
+  canonical: Sweetheart
+  misspellings:
+  - Sweet heart
+  - SweetHeart
+  suggested_fix: Sweetheart
+- id: spell-florist
+  type: name_spelling
+  severity: info
+  title: Spell Florist
+  canonical: Florist
+  misspellings:
+  - Florrist
+  - Flowrist
+  suggested_fix: Florist
+- id: spell-rube
+  type: name_spelling
+  severity: info
+  title: Spell Rube
+  canonical: Rube
+  misspellings:
+  - Rube.
+  - Ruby
+  suggested_fix: Rube
+- id: spell-boss
+  type: name_spelling
+  severity: info
+  title: Spell Boss
+  canonical: Boss
+  misspellings:
+  - Bosss
+  - TheBoss
+  suggested_fix: Boss
+- id: voice-ledger-ara
+  type: custom
+  severity: warning
+  title: Ledger voice ara
+  pattern: Ledger[^\n]{0,40}carina
+  suggested_fix: Ledger locked voiceId is ara.
+  scope:
+    projects:
+    - crew-voice-bible
+- id: custom-double-space
+  type: custom
+  severity: info
+  title: Double spaces
+  pattern: '[ ]{2,}'
+  suggested_fix: Collapse double spaces.
+- id: custom-todo-marker
+  type: custom
+  severity: info
+  title: TODO marker
+  pattern: \bTODO\b
+  suggested_fix: Resolve TODO before lock.

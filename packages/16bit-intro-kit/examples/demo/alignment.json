@@ -1,0 +1,17 @@
+{
+  "segments": [
+    {
+      "start": 0.2,
+      "end": 1.6,
+      "text": "HELLO THERE",
+      "words": [
+        {"word": "HELLO", "start": 0.2, "end": 0.5, "score": 0.93},
+        {"word": "THERE", "start": 0.55, "end": 1.6, "score": 0.88}
+      ]
+    }
+  ],
+  "word_segments": [
+    {"word": "HELLO", "start": 0.2, "end": 0.5, "score": 0.93},
+    {"word": "THERE", "start": 0.55, "end": 1.6, "score": 0.88}
+  ]
+}

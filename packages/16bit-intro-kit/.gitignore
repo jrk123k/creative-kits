@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+out/
+uploads/
+dist/*_audio*
+dist/*_concat.txt
+dist/*_joined.mp3
+dist/*_tail.mp3
+*.egg-info/
+.venv/

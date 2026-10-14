@@ -1,0 +1,7 @@
+node_modules/
+out/
+dist/
+uploads/
+.DS_Store
+*.log
+.remotion/

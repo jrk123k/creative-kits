@@ -1,0 +1,35 @@
+{
+  "name": "overlay-kit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Transparent sci-fi HUD overlay kit for finished music videos. Timeline YAML in, ProRes 4444 and WebM with alpha out, ffmpeg composite to 1080p30.",
+  "type": "module",
+  "scripts": {
+    "test": "tsx --test test/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "props": "tsx scripts/export-props.ts timelines/seventh-observation.yaml out/props.json",
+    "background": "bash scripts/generate-background.sh",
+    "render:webm": "bash scripts/render-overlay.sh webm out/overlay.webm",
+    "render:prores": "bash scripts/render-overlay.sh prores out/overlay.mov",
+    "composite": "bash scripts/composite.sh out/background.mp4 out/overlay.webm assets/audio/The_Seventh_Observation.mp3 out/overlay_demo.mp4",
+    "studio": "remotion studio src/index.ts --props=out/props.json"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.534",
+    "@remotion/fonts": "4.0.534",
+    "@remotion/media-utils": "4.0.534",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "remotion": "4.0.534",
+    "yaml": "2.6.1"
+  },
+  "devDependencies": {
+    "@fontsource/bebas-neue": "5.2.5",
+    "@fontsource/jetbrains-mono": "5.2.5",
+    "@types/node": "22.13.10",
+    "@types/react": "18.3.18",
+    "@types/react-dom": "18.3.5",
+    "tsx": "4.19.3",
+    "typescript": "5.8.2"
+  }
+}

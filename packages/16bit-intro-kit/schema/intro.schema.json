@@ -1,0 +1,332 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://local/introkit/intro.schema.json",
+  "title": "16-bit intro",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["version", "name", "fps", "width", "height", "audio", "scenes"],
+  "properties": {
+    "version": { "const": 1 },
+    "name": { "type": "string", "minLength": 1 },
+    "description": { "type": "string" },
+    "fps": { "type": "integer", "minimum": 1, "maximum": 60 },
+    "width": { "const": 256 },
+    "height": { "const": 224 },
+    "palette": { "enum": ["off", "tg16"] },
+    "audio": { "$ref": "#/$defs/audio" },
+    "mouths": {
+      "type": "object",
+      "additionalProperties": { "$ref": "#/$defs/mouth" }
+    },
+    "vocals": { "$ref": "#/$defs/vocals" },
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/scene" }
+    },
+    "contact": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/contact" }
+    }
+  },
+  "$defs": {
+    "time": {
+      "anyOf": [
+        { "type": "string", "minLength": 1 },
+        { "type": "number", "minimum": 0 }
+      ]
+    },
+    "color": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 4,
+      "items": { "type": "integer", "minimum": 0, "maximum": 255 }
+    },
+    "audio": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["file"],
+      "properties": {
+        "file": { "type": "string", "minLength": 1 },
+        "duration": { "type": "number", "exclusiveMinimum": 0 },
+        "tail": { "$ref": "#/$defs/tail" }
+      }
+    },
+    "tail": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["duration", "source"],
+      "properties": {
+        "duration": { "type": "number", "minimum": 0 },
+        "source": { "enum": ["chiptune", "silence", "file", "none"] },
+        "file": { "type": "string" },
+        "chiptune": { "$ref": "#/$defs/chiptune" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "source": { "const": "file" } }, "required": ["source"] },
+          "then": { "required": ["file"] }
+        },
+        {
+          "if": { "properties": { "source": { "const": "none" } }, "required": ["source"] },
+          "then": { "properties": { "duration": { "const": 0 } } }
+        }
+      ]
+    },
+    "chiptune": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "key": { "type": "string", "minLength": 1 },
+        "mode": { "enum": ["minor", "major"] },
+        "bpm": { "type": "number", "exclusiveMinimum": 0 },
+        "speed": { "type": "number", "exclusiveMinimum": 0 }
+      }
+    },
+    "mouth": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["closed"],
+      "anyOf": [{ "required": ["open"] }, { "required": ["patch"] }],
+      "properties": {
+        "closed": { "type": "string" },
+        "open": { "type": "string" },
+        "patch": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["image", "x", "y"],
+          "properties": {
+            "image": { "type": "string" },
+            "x": { "type": "integer", "minimum": 0 },
+            "y": { "type": "integer", "minimum": 0 }
+          }
+        }
+      }
+    },
+    "vocals": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "hold_frames": { "type": "integer", "minimum": 1, "default": 4 },
+        "lines": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/line" }
+        },
+        "alignment": { "type": "string" },
+        "gap": { "type": "number", "minimum": 0 },
+        "speaker": { "type": "string" },
+        "mouth": { "type": "boolean" }
+      }
+    },
+    "line": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["start", "end"],
+      "properties": {
+        "start": { "$ref": "#/$defs/time" },
+        "end": { "$ref": "#/$defs/time" },
+        "text": { "type": "string" },
+        "mouth": { "type": "boolean", "default": true }
+      }
+    },
+    "contact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label"],
+      "anyOf": [{ "required": ["time"] }, { "required": ["frame"] }],
+      "properties": {
+        "time": { "$ref": "#/$defs/time" },
+        "frame": { "type": "integer", "minimum": 0 },
+        "label": { "type": "string" }
+      }
+    },
+    "scene": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "type", "start", "end"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "description": { "type": "string" },
+        "type": { "enum": ["still", "scroll", "stack", "title"] },
+        "start": { "$ref": "#/$defs/time" },
+        "end": { "$ref": "#/$defs/time" },
+        "cut": { "const": "hard" },
+        "mouth": { "type": "string" },
+        "image": { "type": "string" },
+        "tile": { "type": "string" },
+        "tile_w": { "type": "integer", "minimum": 1 },
+        "scroll_px_per_s": { "type": "number", "minimum": 0 },
+        "direction": { "enum": ["left", "right"] },
+        "sprite": { "$ref": "#/$defs/sprite" },
+        "layers": {
+          "type": "array",
+          "minItems": 1,
+          "items": { "$ref": "#/$defs/layer" }
+        },
+        "background": { "$ref": "#/$defs/background" },
+        "text": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/text" }
+        },
+        "prompt": { "$ref": "#/$defs/prompt" },
+        "fade_in": { "type": "integer", "minimum": 0 }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "type": { "const": "scroll" } }, "required": ["type"] },
+          "then": { "required": ["tile", "scroll_px_per_s"] }
+        },
+        {
+          "if": { "properties": { "type": { "const": "stack" } }, "required": ["type"] },
+          "then": { "required": ["layers"] }
+        },
+        {
+          "if": { "properties": { "type": { "const": "title" } }, "required": ["type"] },
+          "then": { "required": ["background"] }
+        }
+      ]
+    },
+    "background": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "image": { "type": "string" },
+        "color": { "$ref": "#/$defs/color" }
+      }
+    },
+    "text": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "y"],
+      "properties": {
+        "text": { "type": "string", "minLength": 1 },
+        "font": { "enum": ["logo", "small"] },
+        "x": { "type": "integer" },
+        "y": { "type": "integer" },
+        "align": { "enum": ["left", "center"] },
+        "scale": { "type": "integer", "minimum": 1, "maximum": 8 },
+        "gap": { "type": "integer", "minimum": 0 },
+        "color": { "$ref": "#/$defs/color" },
+        "outline": { "$ref": "#/$defs/color" },
+        "sheen": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "prompt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "y"],
+      "properties": {
+        "text": { "type": "string", "minLength": 1 },
+        "font": { "enum": ["small", "logo"] },
+        "x": { "type": "integer" },
+        "y": { "type": "integer" },
+        "align": { "enum": ["left", "center"] },
+        "scale": { "type": "integer", "minimum": 1, "maximum": 8 },
+        "gap": { "type": "integer", "minimum": 0 },
+        "color": { "$ref": "#/$defs/color" },
+        "outline": { "$ref": "#/$defs/color" },
+        "on_seconds": { "type": "number", "exclusiveMinimum": 0 },
+        "off_seconds": { "type": "number", "exclusiveMinimum": 0 }
+      }
+    },
+    "layer": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["type"],
+      "properties": {
+        "type": { "enum": ["image", "sprite"] },
+        "image": { "type": "string" },
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "id": { "type": "string" },
+        "frames": { "type": "array", "items": { "type": "string" } },
+        "bob_px": { "type": "number" },
+        "bob_hz": { "type": "number", "minimum": 0 },
+        "parent": { "type": "string" },
+        "ox": { "type": "integer" },
+        "oy": { "type": "integer" },
+        "keys": { "type": "array", "items": { "$ref": "#/$defs/key" } },
+        "show": { "type": "array", "minItems": 2, "maxItems": 2, "items": { "$ref": "#/$defs/time" } },
+        "show_frames": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "type": "integer", "minimum": 0 }
+        },
+        "cycle": { "$ref": "#/$defs/cycle" },
+        "recolor": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["from", "to"],
+            "properties": {
+              "from": { "$ref": "#/$defs/color" },
+              "to": { "$ref": "#/$defs/color" }
+            }
+          }
+        },
+        "pop": { "$ref": "#/$defs/pop" }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "type": { "const": "image" } }, "required": ["type"] },
+          "then": { "required": ["image"] }
+        }
+      ]
+    },
+    "sprite": { "$ref": "#/$defs/layer" },
+    "key": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "t": { "type": "number", "minimum": 0 },
+        "frame": { "type": "integer", "minimum": 0 },
+        "x": { "type": "number" },
+        "y": { "type": "number" },
+        "ease": { "enum": ["linear", "smoothstep"] }
+      }
+    },
+    "cycle": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "mode": { "enum": ["once", "loop"] },
+        "hold": { "type": "integer", "minimum": 1 },
+        "skip_last": { "type": "integer", "minimum": 0 },
+        "show": { "type": "array", "minItems": 2, "maxItems": 2, "items": { "$ref": "#/$defs/time" } },
+        "show_frames": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "items": { "type": "integer", "minimum": 0 }
+        }
+      }
+    },
+    "pop": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "frames": { "type": "integer", "minimum": 1 },
+        "above": { "type": "string" },
+        "squash_h": { "type": "integer", "minimum": 1 },
+        "canvas_h": { "type": "integer", "minimum": 1 },
+        "paste_y": { "type": "integer", "minimum": 0 },
+        "y": { "type": "integer" },
+        "image": { "type": "string" },
+        "flash": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["x", "y", "w", "h", "color"],
+          "properties": {
+            "x": { "type": "integer" },
+            "y": { "type": "integer" },
+            "w": { "type": "integer", "minimum": 1 },
+            "h": { "type": "integer", "minimum": 1 },
+            "color": { "$ref": "#/$defs/color" }
+          }
+        }
+      }
+    }
+  }
+}

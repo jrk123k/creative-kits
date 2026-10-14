@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "huc6280-chip"
+version = "1.0.0"
+description = "HuC6280 / PC Engine chiptune and SFX renderer"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.24",
+    "soundfile>=0.12",
+]
+
+[project.scripts]
+chip = "chip.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["chip*"]
+
+[tool.setuptools.package-data]
+chip = ["presets/*.mml"]

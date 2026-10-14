@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+/demos/
+/out/
+*.mp4
+*.zip
+.cache/
+/agent-tools/
+/uploads/

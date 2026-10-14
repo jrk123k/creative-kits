@@ -1,0 +1,44 @@
+# Kit sprite packer → 16-bit intro kit.
+#
+# The kit pastes a sprite by its top-left. The packer stores an anchor.
+#   x = kit_place.x - anchor.x
+#   y = kit_place.y - anchor.y
+# Default anchor is bottom-center: x = width // 2, y = height.
+# A 14×12 cow anchored at (7, 12) and planted at (160, 176) is x=153, y=164.
+#
+# cycle.hold is one integer. hold_frames that differ share their greatest
+# common divisor, and the longer frame is listed more than once.
+# Packed at 30 fps. default hold 4 (133.333 ms), which is the kit's cycle.hold default of 4 at 30 fps.
+# Mouth flip rate is vocals.hold_frames, also 4 unless the line below says otherwise.
+#
+mouths:
+  singer:
+    closed: art/singer_256.png
+    open: art/singer_open_256.png
+    patch:
+      image: art/singer_open_patch.png
+      x: 116
+      y: 124
+sprites:
+  cow:
+    id: cow
+    frames:
+    - art/cow_0.png
+    - art/cow_1.png
+    - art/cow_2.png
+    - art/cow_3.png
+    - art/cow_3.png
+    - art/cow_3.png
+    x: 153
+    y: 164
+    anchor:
+      x: 7
+      y: 12
+    kit_place:
+      x: 160
+      y: 176
+      space: anchor
+    cycle:
+      mode: loop
+      hold: 4
+      skip_last: 0

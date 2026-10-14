@@ -1,0 +1,25 @@
+[project]
+name = "retro-voice"
+version = "1.0.0"
+description = "Clean-room SAM-style robot vocals for It's Not What We Thought..."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = ["numpy"]
+
+[project.scripts]
+retro-voice = "retro_voice.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["retro_voice*"]
+
+[tool.pytest.ini_options]
+pythonpath = ["."]
+testpaths = ["tests"]

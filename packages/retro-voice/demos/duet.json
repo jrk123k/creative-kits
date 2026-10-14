@@ -1,0 +1,25 @@
+{
+  "tempo": 100,
+  "bars": 8,
+  "beat": true,
+  "beat_gain": 0.48,
+  "effects": "c64",
+  "voices": [
+    {
+      "name": "lead",
+      "midi": "lead.mid",
+      "lyrics_file": "lead.txt",
+      "preset": "lead",
+      "gain": 0.82,
+      "seed": 0
+    },
+    {
+      "name": "harmony",
+      "midi": "harmony.mid",
+      "lyrics_file": "harmony.txt",
+      "preset": "harmony",
+      "gain": 0.7,
+      "seed": 1
+    }
+  ]
+}

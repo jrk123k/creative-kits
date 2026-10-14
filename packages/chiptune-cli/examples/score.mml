@@ -1,0 +1,10 @@
+; One bar you can render with: chip render examples/score.mml -o out.wav
+; Channels A-F are PSG channels 1-6. See the README for the full syntax.
+@title Demo bar
+@tempo 132
+@master 15 15
+
+A o5 v28 w pulse p15,10 q6 l8 c e g >c r <g e c
+B o4 v18 w organ p10,15 q8 l4 c e g c
+C o3 v24 w triangle p15,15 q8 l4 c c g c
+E n1 nf18 v12 p12,12 q8 l8 [c r]4

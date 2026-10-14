@@ -1,0 +1,12 @@
+; Short stab. E minor chord, a falling saw bass, a noise crack.
+; At 100 BPM the whole hit is 1.2 seconds (two beats).
+@title Sting
+@tempo 100
+@master 15 15
+
+A o4 v28 w square p15,11 q8 l2 e
+B o4 v22 w organ p9,15 q8 l2 b
+D o3 v24 w sine p15,15 q8 l2 e
+C o2 v30 w saw p15,12 q8 l8 e d c <b
+E n1 nf2 v31 p15,15 q8 l8 c v20 c v12 c v5 c
+F n1 nf12 v16 p8,15 q8 l8 c r c r

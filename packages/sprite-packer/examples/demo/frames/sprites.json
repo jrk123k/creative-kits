@@ -1,0 +1,38 @@
+{
+  "format": "kit-sprite-packer-sidecar",
+  "version": 1,
+  "fps": 30,
+  "hold": 4,
+  "anchor": "bottom-center",
+  "animations": {
+    "cow": {
+      "background": "../bg/pasture.png",
+      "place": [
+        48,
+        52
+      ],
+      "place_space": "anchor",
+      "scale": 8,
+      "kit_place": [
+        160,
+        176
+      ],
+      "cycle": {
+        "mode": "loop",
+        "skip_last": 0
+      },
+      "frames": {
+        "cow_3.png": {
+          "duration_ms": 400
+        }
+      }
+    },
+    "singer": {
+      "background": "#000024",
+      "scale": 2,
+      "cycle": {
+        "mode": "loop"
+      }
+    }
+  }
+}

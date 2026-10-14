@@ -1,0 +1,29 @@
+# Power-on screen, then the kid at the C64 types. Shot 1–2 of the video.
+# .cps is characters per second. {typo:WRONG:RIGHT} mistypes, pauses, and corrects.
+# {spade} and {heart} are PETSCII graphics from the uppercase/graphics set.
+.cps 12
+.hold 1.1
+10 PRINT "HELLO."
+.enter
+.hold 0.15
+20 PRINT "I AM YOUR COMPUTER."
+.enter
+.hold 0.2
+30 PR{typo:ONT:INT} "I THINK IN BASIC."
+.enter
+.hold 0.35
+RUN
+.enter
+.hold 0.25
+HELLO.
+.enter
+I AM YOUR COMPUTER.
+.enter
+I THINK IN BASIC.
+.enter
+.hold 0.15
+.ready
+.hold 0.3
+{spade} NOT WHAT WE THOUGHT {heart}
+.enter
+.hold 1.3

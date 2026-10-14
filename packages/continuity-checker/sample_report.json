@@ -1,0 +1,309 @@
+{
+  "tool": "continuity-check",
+  "version": "2.0.0",
+  "drafts_dir": "examples/drafts",
+  "rules_file": "rules.yaml",
+  "summary": {
+    "files_scanned": 4,
+    "files": [
+      "harbor-waltz/SHOTLIST_v2.md",
+      "harbor-waltz/TEST_PROMPTS_3.md",
+      "nova-pixel/BRIEF.md",
+      "veloria-show/NEWS_DRAFT.md"
+    ],
+    "rules_loaded": 41,
+    "findings": 17,
+    "by_severity": {
+      "error": 6,
+      "warning": 8,
+      "info": 3
+    },
+    "by_rule": [
+      {
+        "rule_id": "ban-sphero-in-news",
+        "severity": "error",
+        "title": "No Sphero in news",
+        "count": 1
+      },
+      {
+        "rule_id": "harbor-florist-id-imagine",
+        "severity": "error",
+        "title": "Florist identity in Imagine prompt",
+        "count": 1
+      },
+      {
+        "rule_id": "harbor-hero-id-imagine",
+        "severity": "error",
+        "title": "Hero identity in Imagine prompt",
+        "count": 1
+      },
+      {
+        "rule_id": "harbor-sweetheart-id-imagine",
+        "severity": "error",
+        "title": "Sweetheart identity in Imagine prompt",
+        "count": 1
+      },
+      {
+        "rule_id": "nova-gown-not-canon",
+        "severity": "error",
+        "title": "No gown",
+        "count": 1
+      },
+      {
+        "rule_id": "nova-look-v1",
+        "severity": "error",
+        "title": "Nova look line",
+        "count": 1
+      },
+      {
+        "rule_id": "colin-figment-wardrobe",
+        "severity": "warning",
+        "title": "Colin wardrobe",
+        "count": 1
+      },
+      {
+        "rule_id": "harbor-boss-vest-charcoal",
+        "severity": "warning",
+        "title": "Boss vest charcoal",
+        "count": 1
+      },
+      {
+        "rule_id": "harbor-hero-id-shotlist",
+        "severity": "warning",
+        "title": "Hero identity on shot-list cell",
+        "count": 1
+      },
+      {
+        "rule_id": "harbor-sweetheart-id-shotlist",
+        "severity": "warning",
+        "title": "Sweetheart identity on shot-list cell",
+        "count": 1
+      },
+      {
+        "rule_id": "nova-voice-cfg",
+        "severity": "warning",
+        "title": "Voice cfg",
+        "count": 1
+      },
+      {
+        "rule_id": "nova-voice-exaggeration",
+        "severity": "warning",
+        "title": "Voice exaggeration",
+        "count": 1
+      },
+      {
+        "rule_id": "nova-voice-temperature",
+        "severity": "warning",
+        "title": "Voice temperature",
+        "count": 1
+      },
+      {
+        "rule_id": "sarah-ashford-wardrobe",
+        "severity": "warning",
+        "title": "Sarah wardrobe",
+        "count": 1
+      },
+      {
+        "rule_id": "spell-sweetheart",
+        "severity": "info",
+        "title": "Spell Sweetheart",
+        "count": 3
+      }
+    ]
+  },
+  "findings": [
+    {
+      "severity": "error",
+      "file": "harbor-waltz/TEST_PROMPTS_3.md",
+      "line": 3,
+      "rule": "harbor-hero-id-imagine",
+      "rule_type": "required_verbatim",
+      "title": "Hero identity in Imagine prompt",
+      "message": "Hero is named in this prompt, but the locked description is not there word for word.",
+      "snippet": "## Prompt: Hero tips his cap",
+      "suggested_fix": "Paste the locked block.\n\nHero, a lean young man in his mid-twenties, clean-shaven, with dark brown wavy hair curling out under a grey flat tweed newsboy cap. Wide toothy grin, dark brows, warm brown eyes. Cream linen shirt with the sleeves rolled to the forearm, open collar, grey-brown suspenders, dark brown wool trousers.",
+      "source": "harbor-waltz/bible"
+    },
+    {
+      "severity": "error",
+      "file": "harbor-waltz/TEST_PROMPTS_3.md",
+      "line": 6,
+      "rule": "harbor-sweetheart-id-imagine",
+      "rule_type": "required_verbatim",
+      "title": "Sweetheart identity in Imagine prompt",
+      "message": "Sweetheart is named in this prompt, but the locked description is not there word for word.",
+      "snippet": "## Prompt: Sweetheart waits",
+      "suggested_fix": "Paste the locked block.\n\nSweetheart, a slender flapper in her mid-twenties with a glossy black chin-length bob, blunt bangs and a sleek curl at each cheek. Pale skin, smoky dark eye makeup, deep red lips, a cool level gaze. Emerald-green beaded drop-waist sleeveless dress with gold Art Deco chevrons, emerald felt cloche with a gold-and-green feather brooch, long pearl ropes, emerald bracelet, gold beaded clutch.",
+      "source": "harbor-waltz/bible"
+    },
+    {
+      "severity": "error",
+      "file": "harbor-waltz/TEST_PROMPTS_3.md",
+      "line": 9,
+      "rule": "harbor-florist-id-imagine",
+      "rule_type": "required_verbatim",
+      "title": "Florist identity in Imagine prompt",
+      "message": "Florist is named in this prompt, but the locked description is not there word for word.",
+      "snippet": "## Prompt: Florist",
+      "suggested_fix": "Paste the locked block.\n\nFlorist, a kindly man in his late sixties with neat swept-back silver-grey hair, wire-rimmed round glasses and a gentle closed smile. Pale yellow button shirt, maroon bow tie, long tan canvas work apron with a chest pocket holding a pencil.",
+      "source": "harbor-waltz/bible"
+    },
+    {
+      "severity": "error",
+      "file": "nova-pixel/BRIEF.md",
+      "line": 3,
+      "rule": "nova-look-v1",
+      "rule_type": "required_verbatim",
+      "title": "Nova look line",
+      "message": "Look is named in this prompt, but the locked description is not there word for word.",
+      "snippet": "Look line paraphrased on purpose so the checker can flag it:",
+      "suggested_fix": "Paste the locked block.\n\ngrey-skinned alien woman, long straight silver hair, large black eyes, inverted-triangle forehead mark, silver metallic bodysuit with an inverted-triangle chest emblem, belt with an X-buckle",
+      "source": "nova-pixel/bible"
+    },
+    {
+      "severity": "error",
+      "file": "nova-pixel/BRIEF.md",
+      "line": 4,
+      "rule": "nova-gown-not-canon",
+      "rule_type": "forbidden_in_context",
+      "title": "No gown",
+      "message": "'gown' is not allowed in this context.",
+      "snippet": "silver alien in a shiny suit and a ball gown.",
+      "suggested_fix": "Remove the banned term."
+    },
+    {
+      "severity": "error",
+      "file": "veloria-show/NEWS_DRAFT.md",
+      "line": 5,
+      "rule": "ban-sphero-in-news",
+      "rule_type": "forbidden_in_context",
+      "title": "No Sphero in news",
+      "message": "'Sphero' is not allowed in this context.",
+      "snippet": "Sphero mark appears in the lower third by mistake.",
+      "suggested_fix": "Remove the banned term."
+    },
+    {
+      "severity": "warning",
+      "file": "harbor-waltz/SHOTLIST_v2.md",
+      "line": 6,
+      "rule": "harbor-hero-id-shotlist",
+      "rule_type": "required_verbatim",
+      "title": "Hero identity on shot-list cell",
+      "message": "Hero is named in this prompt, but the locked description is not there word for word.",
+      "snippet": "Hero tips his cap on the sidewalk",
+      "suggested_fix": "Paste the locked block.\n\nHero, a lean young man in his mid-twenties, clean-shaven, with dark brown wavy hair curling out under a grey flat tweed newsboy cap. Wide toothy grin, dark brows, warm brown eyes. Cream linen shirt with the sleeves rolled to the forearm, open collar, grey-brown suspenders, dark brown wool trousers.",
+      "source": "harbor-waltz/bible"
+    },
+    {
+      "severity": "warning",
+      "file": "harbor-waltz/SHOTLIST_v2.md",
+      "line": 8,
+      "rule": "harbor-sweetheart-id-shotlist",
+      "rule_type": "required_verbatim",
+      "title": "Sweetheart identity on shot-list cell",
+      "message": "Sweetheart is named in this prompt, but the locked description is not there word for word.",
+      "snippet": "Sweetheart spins once under a streetlamp",
+      "suggested_fix": "Paste the locked block.\n\nSweetheart, a slender flapper in her mid-twenties with a glossy black chin-length bob, blunt bangs and a sleek curl at each cheek. Pale skin, smoky dark eye makeup, deep red lips, a cool level gaze. Emerald-green beaded drop-waist sleeveless dress with gold Art Deco chevrons, emerald felt cloche with a gold-and-green feather brooch, long pearl ropes, emerald bracelet, gold beaded clutch.",
+      "source": "harbor-waltz/bible"
+    },
+    {
+      "severity": "warning",
+      "file": "harbor-waltz/SHOTLIST_v2.md",
+      "line": 9,
+      "rule": "harbor-boss-vest-charcoal",
+      "rule_type": "term_lock",
+      "title": "Boss vest charcoal",
+      "message": "Locked term is 'charcoal', not 'grey vest'.",
+      "snippet": "| S21 | 2:08.0-2:11.7 | One kick to the gizzard, and she told me to skidoo. | Boss at the desk with a grey vest |",
+      "suggested_fix": "Use the preferred term."
+    },
+    {
+      "severity": "warning",
+      "file": "nova-pixel/BRIEF.md",
+      "line": 6,
+      "rule": "nova-voice-cfg",
+      "rule_type": "custom",
+      "title": "Voice cfg",
+      "message": "Voice cfg. Matched 'cfg 0'.",
+      "snippet": "Voice UI draft: temperature 0.8, exaggeration 0.9, cfg 0.9.",
+      "suggested_fix": "Keep cfg at 0.5."
+    },
+    {
+      "severity": "warning",
+      "file": "nova-pixel/BRIEF.md",
+      "line": 6,
+      "rule": "nova-voice-exaggeration",
+      "rule_type": "custom",
+      "title": "Voice exaggeration",
+      "message": "Voice exaggeration. Matched 'exaggeration 0'.",
+      "snippet": "Voice UI draft: temperature 0.8, exaggeration 0.9, cfg 0.9.",
+      "suggested_fix": "Keep exaggeration at 0.3."
+    },
+    {
+      "severity": "warning",
+      "file": "nova-pixel/BRIEF.md",
+      "line": 6,
+      "rule": "nova-voice-temperature",
+      "rule_type": "custom",
+      "title": "Voice temperature",
+      "message": "Voice temperature. Matched 'temperature 0'.",
+      "snippet": "Voice UI draft: temperature 0.8, exaggeration 0.9, cfg 0.9.",
+      "suggested_fix": "Keep temperature at 0.5."
+    },
+    {
+      "severity": "warning",
+      "file": "veloria-show/NEWS_DRAFT.md",
+      "line": 3,
+      "rule": "colin-figment-wardrobe",
+      "rule_type": "term_lock",
+      "title": "Colin wardrobe",
+      "message": "Locked term is 'navy blazer', not 'white-tie'.",
+      "snippet": "Colin wears white-tie evening wear.",
+      "suggested_fix": "Use the preferred term."
+    },
+    {
+      "severity": "warning",
+      "file": "veloria-show/NEWS_DRAFT.md",
+      "line": 4,
+      "rule": "sarah-ashford-wardrobe",
+      "rule_type": "term_lock",
+      "title": "Sarah wardrobe",
+      "message": "Locked term is 'charcoal suit', not 'red jacket'.",
+      "snippet": "Sarah Ashford in a red jacket.",
+      "suggested_fix": "Use the preferred term."
+    },
+    {
+      "severity": "info",
+      "file": "harbor-waltz/SHOTLIST_v2.md",
+      "line": 8,
+      "rule": "spell-sweetheart",
+      "rule_type": "name_spelling",
+      "title": "Spell Sweetheart",
+      "message": "Spelling 'Sweetheart' is not the locked form 'Sweetheart'.",
+      "snippet": "| S10 | 0:48.0-0:52.0 | Just a little dance | Sweetheart spins once under a streetlamp |",
+      "suggested_fix": "Sweetheart"
+    },
+    {
+      "severity": "info",
+      "file": "harbor-waltz/TEST_PROMPTS_3.md",
+      "line": 6,
+      "rule": "spell-sweetheart",
+      "rule_type": "name_spelling",
+      "title": "Spell Sweetheart",
+      "message": "Spelling 'Sweetheart' is not the locked form 'Sweetheart'.",
+      "snippet": "## Prompt: Sweetheart waits",
+      "suggested_fix": "Sweetheart"
+    },
+    {
+      "severity": "info",
+      "file": "harbor-waltz/TEST_PROMPTS_3.md",
+      "line": 7,
+      "rule": "spell-sweetheart",
+      "rule_type": "name_spelling",
+      "title": "Spell Sweetheart",
+      "message": "Spelling 'Sweetheart' is not the locked form 'Sweetheart'.",
+      "snippet": "Sweetheart stands under the marquee in a green dress.",
+      "suggested_fix": "Sweetheart"
+    }
+  ]
+}

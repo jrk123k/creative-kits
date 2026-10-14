@@ -1,0 +1,25 @@
+[project]
+name = "continuity-checker"
+version = "2.0.0"
+description = "Check drafts against character bibles, voice bible, and shot-list timing."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["PyYAML>=6"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+continuity-check = "continuity_checker.cli:main"
+vo-fit = "continuity_checker.vo_fit_cli:main"
+voice-bible-check = "continuity_checker.voice_bible_cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

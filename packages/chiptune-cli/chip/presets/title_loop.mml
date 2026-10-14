@@ -1,0 +1,32 @@
+; Title loop. The demo fallback phrase: 23 quarter-notes in D minor.
+; At the written 138 BPM (92 BPM x 1.5) the loop is exactly 10.0 seconds.
+; It starts on an attack from silence and ends in a rest, so a player can
+; loop the file without a click. Pulse lead, square harmony, triangle bass,
+; short noise ticks. This is an original phrase, not a transcription.
+@title Title loop
+@tempo 138
+@master 15 15
+@seamless
+
+A | o5 v28 w pulse p15,13 q7 l4
+  d f a g f d c
+  o4 a
+  r1
+  a
+  o5 c d f2 d c d2 & d4 & d20
+  r5
+B | o4 v23 w square p13,15 q8 l4
+  f1 d1 a1 f1
+  d2 & d4
+  d2 & d4 & d20
+  r5
+C | o2 v26 w triangle p15,15 q8 l4
+  d1 f1 g1 d1
+  a2 & a4
+  d2 & d4 & d20
+  r5
+E | n1 nf18 v16 p12,12 q8
+  [c64 [r64]15]8
+  r1
+  [c64 [r64]15]10
+  r4

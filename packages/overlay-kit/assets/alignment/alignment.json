@@ -1,0 +1,1055 @@
+{
+  "audio_filename": "The_Seventh_Observation.mp3",
+  "audio_sha256": "6ae140c8fd47173214faad4597aa17edb61890267c3b06c2021272a78ffe2f33",
+  "duration_sec": 117.0024375,
+  "device": "cpu (4 cores, x86_64, torch 2.8.0+cpu, no GPU)",
+  "models": {
+    "vocal": {
+      "filename": "model_bs_roformer_ep_317_sdr_12.9755.ckpt",
+      "name": "Roformer Model: BS-Roformer-Viperx-1297",
+      "package": "audio-separator 0.47.0",
+      "weights": "official UVR model repo or nomadkaraoke/python-audio-separator model-configs release"
+    },
+    "dereverb": {
+      "filename": "dereverb_mel_band_roformer_anvuew_sdr_19.1729.ckpt",
+      "name": "Roformer Model: MelBand Roformer | De-Reverb by anvuew",
+      "package": "audio-separator 0.47.0",
+      "weights": "official UVR model repo or nomadkaraoke/python-audio-separator model-configs release"
+    },
+    "align": {
+      "filename": "WAV2VEC2_ASR_BASE_960H",
+      "name": "WAV2VEC2_ASR_BASE_960H",
+      "whisperx": "3.8.6",
+      "source": "torchaudio pipeline WAV2VEC2_ASR_BASE_960H (download.pytorch.org). No Hugging Face token."
+    }
+  },
+  "runtime_sec": {
+    "vocal_separation": 1468.0,
+    "dereverb": 324.805,
+    "alignment": 11.726637738000136,
+    "total": 1804.5316377380002,
+    "wall_this_process": 12.062157265999303
+  },
+  "lyrics_file": "lyrics/the_seventh_observation.txt",
+  "alignment_input": {
+    "text": "Hello again, humans. Humans. No hope for this planet. No hope. Galactic intelligence. Galactic intelligence. And that's what you ask. What you ask. Xenobiologist, that means I get to judge you. Why do humans always believe you are alone in the universe? Alone. Alone.",
+    "start": 0.0,
+    "end": 117.0024375,
+    "hand_timings_used": false
+  },
+  "segments": [
+    {
+      "index": 0,
+      "start": 0.16,
+      "end": 4.321,
+      "text": "Hello again, humans.",
+      "confidence": 0.8673333333333333,
+      "speaker": "nova",
+      "mouth_open": true,
+      "words": [
+        {
+          "word": "Hello",
+          "start": 0.16,
+          "end": 0.78,
+          "confidence": 0.85
+        },
+        {
+          "word": "again,",
+          "start": 0.96,
+          "end": 1.76,
+          "confidence": 0.938
+        },
+        {
+          "word": "humans.",
+          "start": 3.261,
+          "end": 4.321,
+          "confidence": 0.814
+        }
+      ]
+    },
+    {
+      "index": 1,
+      "start": 13.543,
+      "end": 14.363,
+      "text": "Humans.",
+      "confidence": 0.725,
+      "speaker": "nova",
+      "mouth_open": true,
+      "words": [
+        {
+          "word": "Humans.",
+          "start": 13.543,
+          "end": 14.363,
+          "confidence": 0.725
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "start": 21.464,
+      "end": 23.204,
+      "text": "No hope for this planet.",
+      "confidence": 0.9446,
+      "speaker": "nova",
+      "mouth_open": true,
+      "words": [
+        {
+          "word": "No",
+          "start": 21.464,
+          "end": 21.684,
+          "confidence": 0.923
+        },
+        {
+          "word": "hope",
+          "start": 21.764,
+          "end": 22.024,
+          "confidence": 0.992
+        },
+        {
+          "word": "for",
+          "start": 22.084,
+          "end": 22.224,
+          "confidence": 0.988
+        },
+        {
+          "word": "this",
+          "start": 22.264,
+          "end": 22.444,
+          "confidence": 0.912
+        },
+        {
+          "word": "planet.",
+          "start": 22.564,
+          "end": 23.204,
+          "confidence": 0.908
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "start": 25.225,
+      "end": 26.025,
+      "text": "No hope.",
+      "confidence": 0.884,
+      "speaker": "nova",
+      "mouth_open": true,
+      "words": [
+        {
+          "word": "No",
+          "start": 25.225,
+          "end": 25.485,
+          "confidence": 0.883
+        },
+        {
+          "word": "hope.",
+          "start": 25.625,
+          "end": 26.025,
+          "confidence": 0.885
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "start": 28.365,
+      "end": 29.986,
+      "text": "Galactic intelligence.",
+      "confidence": 0.839,
+      "speaker": "nova",
+      "mouth_open": true,
+      "words": [
+        {
+          "word": "Galactic",
+          "start": 28.365,
+          "end": 29.026,
+          "confidence": 0.808
+        },
+        {
+          "word": "intelligence.",
+          "start": 29.086,
+          "end": 29.986,
+          "confidence": 0.87
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "start": 36.707,
+      "end": 38.427,
+      "text": "Galactic intelligence.",
+      "confidence": 0.8365,
+      "speaker": "nova",
+      "mouth_open": true,
+      "words": [
+        {
+          "word": "Galactic",
+          "start": 36.707,
+          "end": 37.387,
+          "confidence": 0.846
+        },
+        {
+          "word": "intelligence.",
+          "start": 37.447,
+          "end": 38.427,
+          "confidence": 0.827
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "start": 40.328,
+      "end": 41.808,
+      "text": "And that's what you ask.",
+      "confidence": 0.8602000000000001,
+      "speaker": "nova",
+      "mouth_open": true,
+      "words": [
+        {
+          "word": "And",
+          "start": 40.328,
+          "end": 40.448,
+          "confidence": 0.821
+        },
+        {
+          "word": "that's",
+          "start": 40.488,
+          "end": 40.788,
+          "confidence": 0.736
+        },
+        {
+          "word": "what",
+          "start": 40.848,
+          "end": 41.008,
+          "confidence": 0.89
+        },
+        {
+          "word": "you",
+          "start": 41.048,
+          "end": 41.228,
+          "confidence": 0.879
+        },
+        {
+          "word": "ask.",
+          "start": 41.508,
+          "end": 41.808,
+          "confidence": 0.975
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "start": 47.669,
+      "end": 48.629,
+      "text": "What you ask.",
+      "confidence": 0.8530000000000001,
+      "speaker": "nova",
+      "mouth_open": true,
+      "words": [
+        {
+          "word": "What",
+          "start": 47.669,
+          "end": 47.849,
+          "confidence": 0.792
+        },
+        {
+          "word": "you",
+          "start": 47.889,
+          "end": 48.069,
+          "confidence": 0.912
+        },
+        {
+          "word": "ask.",
+          "start": 48.329,
+          "end": 48.629,
+          "confidence": 0.855
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "start": 60.952,
+      "end": 64.552,
+      "text": "Xenobiologist, that means I get to judge you.",
+      "confidence": 0.870375,
+      "speaker": "nova",
+      "mouth_open": true,
+      "words": [
+        {
+          "word": "Xenobiologist,",
+          "start": 60.952,
+          "end": 62.152,
+          "confidence": 0.842
+        },
+        {
+          "word": "that",
+          "start": 62.752,
+          "end": 62.912,
+          "confidence": 0.893
+        },
+        {
+          "word": "means",
+          "start": 62.972,
+          "end": 63.252,
+          "confidence": 0.851
+        },
+        {
+          "word": "I",
+          "start": 63.332,
+          "end": 63.412,
+          "confidence": 0.76
+        },
+        {
+          "word": "get",
+          "start": 63.432,
+          "end": 63.612,
+          "confidence": 0.929
+        },
+        {
+          "word": "to",
+          "start": 63.652,
+          "end": 63.752,
+          "confidence": 0.794
+        },
+        {
+          "word": "judge",
+          "start": 63.832,
+          "end": 64.152,
+          "confidence": 0.927
+        },
+        {
+          "word": "you.",
+          "start": 64.212,
+          "end": 64.552,
+          "confidence": 0.967
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "start": 73.614,
+      "end": 81.276,
+      "text": "Why do humans always believe you are alone in the universe?",
+      "confidence": 0.8844545454545454,
+      "speaker": "nova",
+      "mouth_open": true,
+      "words": [
+        {
+          "word": "Why",
+          "start": 73.614,
+          "end": 73.934,
+          "confidence": 0.983
+        },
+        {
+          "word": "do",
+          "start": 74.014,
+          "end": 74.254,
+          "confidence": 0.855
+        },
+        {
+          "word": "humans",
+          "start": 74.334,
+          "end": 75.074,
+          "confidence": 0.84
+        },
+        {
+          "word": "always",
+          "start": 75.254,
+          "end": 75.594,
+          "confidence": 0.856
+        },
+        {
+          "word": "believe",
+          "start": 75.715,
+          "end": 76.255,
+          "confidence": 0.849
+        },
+        {
+          "word": "you",
+          "start": 76.315,
+          "end": 76.495,
+          "confidence": 0.993
+        },
+        {
+          "word": "are",
+          "start": 76.655,
+          "end": 76.775,
+          "confidence": 0.888
+        },
+        {
+          "word": "alone",
+          "start": 76.875,
+          "end": 77.595,
+          "confidence": 0.845
+        },
+        {
+          "word": "in",
+          "start": 79.975,
+          "end": 80.135,
+          "confidence": 0.903
+        },
+        {
+          "word": "the",
+          "start": 80.195,
+          "end": 80.295,
+          "confidence": 0.982
+        },
+        {
+          "word": "universe?",
+          "start": 80.495,
+          "end": 81.276,
+          "confidence": 0.735
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "start": 84.876,
+      "end": 85.576,
+      "text": "Alone.",
+      "confidence": 0.931,
+      "speaker": "nova",
+      "mouth_open": true,
+      "words": [
+        {
+          "word": "Alone.",
+          "start": 84.876,
+          "end": 85.576,
+          "confidence": 0.931
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "start": 85.596,
+      "end": 91.338,
+      "text": "Alone.",
+      "confidence": 0.848,
+      "speaker": "human_male",
+      "mouth_open": false,
+      "words": [
+        {
+          "word": "Alone.",
+          "start": 85.596,
+          "end": 91.338,
+          "confidence": 0.848
+        }
+      ]
+    }
+  ],
+  "words": [
+    {
+      "word": "Hello",
+      "start": 0.16,
+      "end": 0.78,
+      "confidence": 0.85
+    },
+    {
+      "word": "again,",
+      "start": 0.96,
+      "end": 1.76,
+      "confidence": 0.938
+    },
+    {
+      "word": "humans.",
+      "start": 3.261,
+      "end": 4.321,
+      "confidence": 0.814
+    },
+    {
+      "word": "Humans.",
+      "start": 13.543,
+      "end": 14.363,
+      "confidence": 0.725
+    },
+    {
+      "word": "No",
+      "start": 21.464,
+      "end": 21.684,
+      "confidence": 0.923
+    },
+    {
+      "word": "hope",
+      "start": 21.764,
+      "end": 22.024,
+      "confidence": 0.992
+    },
+    {
+      "word": "for",
+      "start": 22.084,
+      "end": 22.224,
+      "confidence": 0.988
+    },
+    {
+      "word": "this",
+      "start": 22.264,
+      "end": 22.444,
+      "confidence": 0.912
+    },
+    {
+      "word": "planet.",
+      "start": 22.564,
+      "end": 23.204,
+      "confidence": 0.908
+    },
+    {
+      "word": "No",
+      "start": 25.225,
+      "end": 25.485,
+      "confidence": 0.883
+    },
+    {
+      "word": "hope.",
+      "start": 25.625,
+      "end": 26.025,
+      "confidence": 0.885
+    },
+    {
+      "word": "Galactic",
+      "start": 28.365,
+      "end": 29.026,
+      "confidence": 0.808
+    },
+    {
+      "word": "intelligence.",
+      "start": 29.086,
+      "end": 29.986,
+      "confidence": 0.87
+    },
+    {
+      "word": "Galactic",
+      "start": 36.707,
+      "end": 37.387,
+      "confidence": 0.846
+    },
+    {
+      "word": "intelligence.",
+      "start": 37.447,
+      "end": 38.427,
+      "confidence": 0.827
+    },
+    {
+      "word": "And",
+      "start": 40.328,
+      "end": 40.448,
+      "confidence": 0.821
+    },
+    {
+      "word": "that's",
+      "start": 40.488,
+      "end": 40.788,
+      "confidence": 0.736
+    },
+    {
+      "word": "what",
+      "start": 40.848,
+      "end": 41.008,
+      "confidence": 0.89
+    },
+    {
+      "word": "you",
+      "start": 41.048,
+      "end": 41.228,
+      "confidence": 0.879
+    },
+    {
+      "word": "ask.",
+      "start": 41.508,
+      "end": 41.808,
+      "confidence": 0.975
+    },
+    {
+      "word": "What",
+      "start": 47.669,
+      "end": 47.849,
+      "confidence": 0.792
+    },
+    {
+      "word": "you",
+      "start": 47.889,
+      "end": 48.069,
+      "confidence": 0.912
+    },
+    {
+      "word": "ask.",
+      "start": 48.329,
+      "end": 48.629,
+      "confidence": 0.855
+    },
+    {
+      "word": "Xenobiologist,",
+      "start": 60.952,
+      "end": 62.152,
+      "confidence": 0.842
+    },
+    {
+      "word": "that",
+      "start": 62.752,
+      "end": 62.912,
+      "confidence": 0.893
+    },
+    {
+      "word": "means",
+      "start": 62.972,
+      "end": 63.252,
+      "confidence": 0.851
+    },
+    {
+      "word": "I",
+      "start": 63.332,
+      "end": 63.412,
+      "confidence": 0.76
+    },
+    {
+      "word": "get",
+      "start": 63.432,
+      "end": 63.612,
+      "confidence": 0.929
+    },
+    {
+      "word": "to",
+      "start": 63.652,
+      "end": 63.752,
+      "confidence": 0.794
+    },
+    {
+      "word": "judge",
+      "start": 63.832,
+      "end": 64.152,
+      "confidence": 0.927
+    },
+    {
+      "word": "you.",
+      "start": 64.212,
+      "end": 64.552,
+      "confidence": 0.967
+    },
+    {
+      "word": "Why",
+      "start": 73.614,
+      "end": 73.934,
+      "confidence": 0.983
+    },
+    {
+      "word": "do",
+      "start": 74.014,
+      "end": 74.254,
+      "confidence": 0.855
+    },
+    {
+      "word": "humans",
+      "start": 74.334,
+      "end": 75.074,
+      "confidence": 0.84
+    },
+    {
+      "word": "always",
+      "start": 75.254,
+      "end": 75.594,
+      "confidence": 0.856
+    },
+    {
+      "word": "believe",
+      "start": 75.715,
+      "end": 76.255,
+      "confidence": 0.849
+    },
+    {
+      "word": "you",
+      "start": 76.315,
+      "end": 76.495,
+      "confidence": 0.993
+    },
+    {
+      "word": "are",
+      "start": 76.655,
+      "end": 76.775,
+      "confidence": 0.888
+    },
+    {
+      "word": "alone",
+      "start": 76.875,
+      "end": 77.595,
+      "confidence": 0.845
+    },
+    {
+      "word": "in",
+      "start": 79.975,
+      "end": 80.135,
+      "confidence": 0.903
+    },
+    {
+      "word": "the",
+      "start": 80.195,
+      "end": 80.295,
+      "confidence": 0.982
+    },
+    {
+      "word": "universe?",
+      "start": 80.495,
+      "end": 81.276,
+      "confidence": 0.735
+    },
+    {
+      "word": "Alone.",
+      "start": 84.876,
+      "end": 85.576,
+      "confidence": 0.931
+    },
+    {
+      "word": "Alone.",
+      "start": 85.596,
+      "end": 91.338,
+      "confidence": 0.848
+    }
+  ],
+  "aligner_segments": [
+    {
+      "text": "Hello again, humans.",
+      "start": 0.16,
+      "end": 4.321,
+      "words": [
+        {
+          "word": "Hello",
+          "start": 0.16,
+          "end": 0.78,
+          "confidence": 0.85
+        },
+        {
+          "word": "again,",
+          "start": 0.96,
+          "end": 1.76,
+          "confidence": 0.938
+        },
+        {
+          "word": "humans.",
+          "start": 3.261,
+          "end": 4.321,
+          "confidence": 0.814
+        }
+      ]
+    },
+    {
+      "text": "Humans.",
+      "start": 13.543,
+      "end": 14.363,
+      "words": [
+        {
+          "word": "Humans.",
+          "start": 13.543,
+          "end": 14.363,
+          "confidence": 0.725
+        }
+      ]
+    },
+    {
+      "text": "No hope for this planet.",
+      "start": 21.464,
+      "end": 23.204,
+      "words": [
+        {
+          "word": "No",
+          "start": 21.464,
+          "end": 21.684,
+          "confidence": 0.923
+        },
+        {
+          "word": "hope",
+          "start": 21.764,
+          "end": 22.024,
+          "confidence": 0.992
+        },
+        {
+          "word": "for",
+          "start": 22.084,
+          "end": 22.224,
+          "confidence": 0.988
+        },
+        {
+          "word": "this",
+          "start": 22.264,
+          "end": 22.444,
+          "confidence": 0.912
+        },
+        {
+          "word": "planet.",
+          "start": 22.564,
+          "end": 23.204,
+          "confidence": 0.908
+        }
+      ]
+    },
+    {
+      "text": "No hope.",
+      "start": 25.225,
+      "end": 26.025,
+      "words": [
+        {
+          "word": "No",
+          "start": 25.225,
+          "end": 25.485,
+          "confidence": 0.883
+        },
+        {
+          "word": "hope.",
+          "start": 25.625,
+          "end": 26.025,
+          "confidence": 0.885
+        }
+      ]
+    },
+    {
+      "text": "Galactic intelligence.",
+      "start": 28.365,
+      "end": 29.986,
+      "words": [
+        {
+          "word": "Galactic",
+          "start": 28.365,
+          "end": 29.026,
+          "confidence": 0.808
+        },
+        {
+          "word": "intelligence.",
+          "start": 29.086,
+          "end": 29.986,
+          "confidence": 0.87
+        }
+      ]
+    },
+    {
+      "text": "Galactic intelligence.",
+      "start": 36.707,
+      "end": 38.427,
+      "words": [
+        {
+          "word": "Galactic",
+          "start": 36.707,
+          "end": 37.387,
+          "confidence": 0.846
+        },
+        {
+          "word": "intelligence.",
+          "start": 37.447,
+          "end": 38.427,
+          "confidence": 0.827
+        }
+      ]
+    },
+    {
+      "text": "And that's what you ask.",
+      "start": 40.328,
+      "end": 41.808,
+      "words": [
+        {
+          "word": "And",
+          "start": 40.328,
+          "end": 40.448,
+          "confidence": 0.821
+        },
+        {
+          "word": "that's",
+          "start": 40.488,
+          "end": 40.788,
+          "confidence": 0.736
+        },
+        {
+          "word": "what",
+          "start": 40.848,
+          "end": 41.008,
+          "confidence": 0.89
+        },
+        {
+          "word": "you",
+          "start": 41.048,
+          "end": 41.228,
+          "confidence": 0.879
+        },
+        {
+          "word": "ask.",
+          "start": 41.508,
+          "end": 41.808,
+          "confidence": 0.975
+        }
+      ]
+    },
+    {
+      "text": "What you ask.",
+      "start": 47.669,
+      "end": 48.629,
+      "words": [
+        {
+          "word": "What",
+          "start": 47.669,
+          "end": 47.849,
+          "confidence": 0.792
+        },
+        {
+          "word": "you",
+          "start": 47.889,
+          "end": 48.069,
+          "confidence": 0.912
+        },
+        {
+          "word": "ask.",
+          "start": 48.329,
+          "end": 48.629,
+          "confidence": 0.855
+        }
+      ]
+    },
+    {
+      "text": "Xenobiologist, that means I get to judge you.",
+      "start": 60.952,
+      "end": 64.552,
+      "words": [
+        {
+          "word": "Xenobiologist,",
+          "start": 60.952,
+          "end": 62.152,
+          "confidence": 0.842
+        },
+        {
+          "word": "that",
+          "start": 62.752,
+          "end": 62.912,
+          "confidence": 0.893
+        },
+        {
+          "word": "means",
+          "start": 62.972,
+          "end": 63.252,
+          "confidence": 0.851
+        },
+        {
+          "word": "I",
+          "start": 63.332,
+          "end": 63.412,
+          "confidence": 0.76
+        },
+        {
+          "word": "get",
+          "start": 63.432,
+          "end": 63.612,
+          "confidence": 0.929
+        },
+        {
+          "word": "to",
+          "start": 63.652,
+          "end": 63.752,
+          "confidence": 0.794
+        },
+        {
+          "word": "judge",
+          "start": 63.832,
+          "end": 64.152,
+          "confidence": 0.927
+        },
+        {
+          "word": "you.",
+          "start": 64.212,
+          "end": 64.552,
+          "confidence": 0.967
+        }
+      ]
+    },
+    {
+      "text": "Why do humans always believe you are alone in the universe?",
+      "start": 73.614,
+      "end": 81.276,
+      "words": [
+        {
+          "word": "Why",
+          "start": 73.614,
+          "end": 73.934,
+          "confidence": 0.983
+        },
+        {
+          "word": "do",
+          "start": 74.014,
+          "end": 74.254,
+          "confidence": 0.855
+        },
+        {
+          "word": "humans",
+          "start": 74.334,
+          "end": 75.074,
+          "confidence": 0.84
+        },
+        {
+          "word": "always",
+          "start": 75.254,
+          "end": 75.594,
+          "confidence": 0.856
+        },
+        {
+          "word": "believe",
+          "start": 75.715,
+          "end": 76.255,
+          "confidence": 0.849
+        },
+        {
+          "word": "you",
+          "start": 76.315,
+          "end": 76.495,
+          "confidence": 0.993
+        },
+        {
+          "word": "are",
+          "start": 76.655,
+          "end": 76.775,
+          "confidence": 0.888
+        },
+        {
+          "word": "alone",
+          "start": 76.875,
+          "end": 77.595,
+          "confidence": 0.845
+        },
+        {
+          "word": "in",
+          "start": 79.975,
+          "end": 80.135,
+          "confidence": 0.903
+        },
+        {
+          "word": "the",
+          "start": 80.195,
+          "end": 80.295,
+          "confidence": 0.982
+        },
+        {
+          "word": "universe?",
+          "start": 80.495,
+          "end": 81.276,
+          "confidence": 0.735
+        }
+      ]
+    },
+    {
+      "text": "Alone.",
+      "start": 84.876,
+      "end": 85.576,
+      "words": [
+        {
+          "word": "Alone.",
+          "start": 84.876,
+          "end": 85.576,
+          "confidence": 0.931
+        }
+      ]
+    },
+    {
+      "text": "Alone.",
+      "start": 85.596,
+      "end": 91.338,
+      "words": [
+        {
+          "word": "Alone.",
+          "start": 85.596,
+          "end": 91.338,
+          "confidence": 0.848
+        }
+      ]
+    }
+  ],
+  "warnings": []
+}

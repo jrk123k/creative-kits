@@ -1,0 +1,161 @@
+# Overlay timeline for The Seventh Observation (1:57).
+# 1080p30 only. Times are seconds on the song.
+
+version: 1
+song: audio/The_Seventh_Observation.mp3
+alignment: assets/alignment/alignment.json
+fps: 30
+width: 1920
+height: 1080
+# T+ clock starts at 00:00 when the song starts
+songStartSec: 0
+timecodeOffsetSec: 0
+
+colors:
+  cyan: "#5CE1FF"
+  red: "#FF3140"
+  green: "#3DFF8A"
+  white: "#F4F7FB"
+  grey: "#8E98A8"
+  dim: "#5A6573"
+  box: "rgba(5, 10, 16, 0.72)"
+
+fonts:
+  hud: JetBrains Mono
+  lyrics: Bebas Neue
+
+accentWords:
+  - humans
+  - hope
+  - galactic
+  - alone
+  - universe
+  - xenobiologist
+
+lyrics:
+  pauseGapSec: 1.6
+  maxLineChars: 36
+  maxWords: 8
+  holdSec: 0.85
+  overrides:
+    - start: 0.16
+      end: 4.40
+      text: "HELLO AGAIN, *HUMANS*."
+    - start: 13.50
+      end: 14.50
+      text: "*HUMANS*."
+    - start: 21.40
+      end: 23.30
+      text: "NO *HOPE* FOR THIS PLANET."
+    - start: 25.20
+      end: 26.20
+      text: "NO *HOPE*."
+    - start: 28.30
+      end: 30.10
+      text: "*GALACTIC* INTELLIGENCE."
+    - start: 36.70
+      end: 38.50
+      text: "*GALACTIC* INTELLIGENCE."
+    - start: 40.30
+      end: 41.90
+      text: "AND THAT'S WHAT YOU ASK."
+    - start: 47.60
+      end: 48.80
+      text: "WHAT YOU ASK."
+    - start: 60.90
+      end: 64.70
+      text: "*XENOBIOLOGIST*, THAT MEANS I GET TO JUDGE YOU."
+    - start: 73.60
+      end: 77.70
+      text: "WHY DO *HUMANS* ALWAYS BELIEVE YOU ARE *ALONE*"
+    - start: 79.90
+      end: 81.40
+      text: "IN THE *UNIVERSE*?"
+    - start: 84.80
+      end: 85.59
+      text: "*ALONE*."
+    - start: 85.59
+      end: 91.40
+      text: "*ALONE*."
+
+scenes:
+  - id: intro
+    in: 0
+    out: 16
+    transition: fade
+    transitionFrames: 18
+    layers:
+      brackets: true
+      location: true
+      rec: false
+      lyrics: false
+      status: false
+      equalizer: false
+    location:
+      kicker: LOC
+      title: "MARS · DUNE CREST"
+      subtitle: "THE COLONY BELOW"
+
+  - id: verse
+    in: 16
+    out: 56
+    transition: glitch
+    transitionFrames: 10
+    layers:
+      brackets: true
+      location: true
+      rec: true
+      lyrics: true
+      status: true
+      equalizer: true
+    location:
+      kicker: LOC
+      title: "MARS · DUNE CREST"
+      subtitle: "NIGHTSIDE APPROACH"
+    camera: "CAM 05 · SHOULDER"
+    status:
+      - label: SYS
+        value: NOMINAL
+        tone: green
+      - label: LINK
+        value: "98.2%"
+        tone: cyan
+      - label: FAB
+        value: ONLINE
+        tone: green
+
+  - id: bridge
+    in: 56
+    out: 92
+    transition: glitch
+    transitionFrames: 12
+    layers:
+      brackets: false
+      location: false
+      rec: false
+      lyrics: true
+      status: false
+      equalizer: false
+
+  - id: outro
+    in: 92
+    out: 117.05
+    transition: fade
+    transitionFrames: 16
+    layers:
+      brackets: false
+      location: false
+      rec: false
+      lyrics: false
+      status: true
+      equalizer: true
+    status:
+      - label: SYS
+        value: STANDBY
+        tone: cyan
+      - label: LINK
+        value: "64.0%"
+        tone: cyan
+      - label: FAB
+        value: IDLE
+        tone: grey

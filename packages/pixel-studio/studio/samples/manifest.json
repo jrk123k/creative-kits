@@ -1,0 +1,52 @@
+{
+  "mouth": {
+    "shot": "singer",
+    "naming": "plate",
+    "frames": [
+      "singer_256.png",
+      "singer_open_256.png"
+    ],
+    "mouth": [
+      0,
+      1
+    ],
+    "hold": 4,
+    "fps": 12,
+    "scale": 1,
+    "editorZoom": 2,
+    "background": null,
+    "offset": [
+      0,
+      0
+    ],
+    "patch": {
+      "file": "singer_open_patch.png",
+      "x": 112,
+      "y": 108,
+      "w": 32,
+      "h": 16
+    },
+    "note": "Singer plates, 256\u00d7224. Mouth flaps at a 4-frame hold."
+  },
+  "walk": {
+    "shot": "walker",
+    "naming": "sprite",
+    "frames": [
+      "walker_0.png",
+      "walker_1.png",
+      "walker_2.png",
+      "walker_3.png"
+    ],
+    "mouth": null,
+    "hold": 4,
+    "fps": 8,
+    "scale": 1,
+    "editorZoom": 8,
+    "background": "hill_bg_256.png",
+    "offset": [
+      112,
+      136
+    ],
+    "note": "Walker on the hill. Alpha is 0 or 255."
+  }
+}

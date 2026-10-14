@@ -1,0 +1,14 @@
+; Three UI cues in one take, at 120 BPM (a beat is half a second).
+;   0.00  cursor blip, high square
+;   0.50  cursor blip again
+;   1.00  confirm, a quick major arpeggio
+;   1.50  cancel, three low saw ticks
+@title UI blips
+@tempo 120
+@master 15 15
+
+A o6 v31 w square p15,12 q8
+  c32 [r32]7
+  c32 [r32]7
+  o5 c32 e32 g32 >c32 [r32]4
+  o2 w saw v24 c16 c16 c16 r8

@@ -1,0 +1,798 @@
+{
+  "name": "tg16",
+  "locked": true,
+  "source": "intro kit palette.py",
+  "colors": [
+    {
+      "name": "black",
+      "names": [
+        "black"
+      ],
+      "rgb": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "white",
+      "names": [
+        "white",
+        "ice",
+        "star",
+        "chair2"
+      ],
+      "rgb": [
+        255,
+        255,
+        255
+      ]
+    },
+    {
+      "name": "steel0",
+      "names": [
+        "steel0",
+        "hhair",
+        "saucer0"
+      ],
+      "rgb": [
+        36,
+        36,
+        72
+      ]
+    },
+    {
+      "name": "steel1",
+      "names": [
+        "steel1",
+        "saucer1"
+      ],
+      "rgb": [
+        72,
+        72,
+        109
+      ]
+    },
+    {
+      "name": "steel2",
+      "names": [
+        "steel2",
+        "skin0",
+        "saucer2"
+      ],
+      "rgb": [
+        109,
+        109,
+        145
+      ]
+    },
+    {
+      "name": "steel3",
+      "names": [
+        "steel3",
+        "skin1",
+        "chair4"
+      ],
+      "rgb": [
+        145,
+        145,
+        182
+      ]
+    },
+    {
+      "name": "steel4",
+      "names": [
+        "steel4",
+        "skin2",
+        "star3",
+        "chair3"
+      ],
+      "rgb": [
+        182,
+        182,
+        218
+      ]
+    },
+    {
+      "name": "steel5",
+      "names": [
+        "steel5",
+        "skin3",
+        "wall4",
+        "cloud",
+        "star2",
+        "chair"
+      ],
+      "rgb": [
+        218,
+        218,
+        255
+      ]
+    },
+    {
+      "name": "suit0",
+      "names": [
+        "suit0"
+      ],
+      "rgb": [
+        36,
+        72,
+        72
+      ]
+    },
+    {
+      "name": "suit1",
+      "names": [
+        "suit1"
+      ],
+      "rgb": [
+        72,
+        109,
+        109
+      ]
+    },
+    {
+      "name": "suit2",
+      "names": [
+        "suit2"
+      ],
+      "rgb": [
+        109,
+        145,
+        145
+      ]
+    },
+    {
+      "name": "suit3",
+      "names": [
+        "suit3"
+      ],
+      "rgb": [
+        145,
+        182,
+        182
+      ]
+    },
+    {
+      "name": "suit4",
+      "names": [
+        "suit4",
+        "wall3"
+      ],
+      "rgb": [
+        182,
+        218,
+        218
+      ]
+    },
+    {
+      "name": "suit5",
+      "names": [
+        "suit5",
+        "light"
+      ],
+      "rgb": [
+        218,
+        255,
+        255
+      ]
+    },
+    {
+      "name": "lip",
+      "names": [
+        "lip"
+      ],
+      "rgb": [
+        145,
+        109,
+        145
+      ]
+    },
+    {
+      "name": "mouth",
+      "names": [
+        "mouth"
+      ],
+      "rgb": [
+        36,
+        0,
+        36
+      ]
+    },
+    {
+      "name": "wall0",
+      "names": [
+        "wall0",
+        "floor1",
+        "truck"
+      ],
+      "rgb": [
+        72,
+        109,
+        145
+      ]
+    },
+    {
+      "name": "wall1",
+      "names": [
+        "wall1",
+        "floor2"
+      ],
+      "rgb": [
+        109,
+        145,
+        182
+      ]
+    },
+    {
+      "name": "wall2",
+      "names": [
+        "wall2"
+      ],
+      "rgb": [
+        145,
+        182,
+        218
+      ]
+    },
+    {
+      "name": "floor0",
+      "names": [
+        "floor0",
+        "truck2"
+      ],
+      "rgb": [
+        36,
+        72,
+        109
+      ]
+    },
+    {
+      "name": "screen",
+      "names": [
+        "screen"
+      ],
+      "rgb": [
+        0,
+        0,
+        109
+      ]
+    },
+    {
+      "name": "screen2",
+      "names": [
+        "screen2"
+      ],
+      "rgb": [
+        0,
+        36,
+        145
+      ]
+    },
+    {
+      "name": "cyan",
+      "names": [
+        "cyan"
+      ],
+      "rgb": [
+        0,
+        218,
+        255
+      ]
+    },
+    {
+      "name": "cyan2",
+      "names": [
+        "cyan2"
+      ],
+      "rgb": [
+        0,
+        145,
+        218
+      ]
+    },
+    {
+      "name": "amber",
+      "names": [
+        "amber"
+      ],
+      "rgb": [
+        218,
+        145,
+        0
+      ]
+    },
+    {
+      "name": "orange",
+      "names": [
+        "orange"
+      ],
+      "rgb": [
+        255,
+        109,
+        0
+      ]
+    },
+    {
+      "name": "red",
+      "names": [
+        "red"
+      ],
+      "rgb": [
+        218,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "red2",
+      "names": [
+        "red2"
+      ],
+      "rgb": [
+        145,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "green",
+      "names": [
+        "green"
+      ],
+      "rgb": [
+        0,
+        182,
+        72
+      ]
+    },
+    {
+      "name": "blue",
+      "names": [
+        "blue",
+        "ocean2"
+      ],
+      "rgb": [
+        0,
+        109,
+        218
+      ]
+    },
+    {
+      "name": "navy",
+      "names": [
+        "navy",
+        "ocean0",
+        "sky2",
+        "jean"
+      ],
+      "rgb": [
+        0,
+        36,
+        109
+      ]
+    },
+    {
+      "name": "ocean1",
+      "names": [
+        "ocean1"
+      ],
+      "rgb": [
+        0,
+        72,
+        182
+      ]
+    },
+    {
+      "name": "ocean3",
+      "names": [
+        "ocean3"
+      ],
+      "rgb": [
+        36,
+        145,
+        218
+      ]
+    },
+    {
+      "name": "land0",
+      "names": [
+        "land0",
+        "grass3"
+      ],
+      "rgb": [
+        36,
+        109,
+        36
+      ]
+    },
+    {
+      "name": "land1",
+      "names": [
+        "land1"
+      ],
+      "rgb": [
+        36,
+        145,
+        72
+      ]
+    },
+    {
+      "name": "land2",
+      "names": [
+        "land2"
+      ],
+      "rgb": [
+        109,
+        145,
+        72
+      ]
+    },
+    {
+      "name": "land3",
+      "names": [
+        "land3"
+      ],
+      "rgb": [
+        145,
+        109,
+        72
+      ]
+    },
+    {
+      "name": "land4",
+      "names": [
+        "land4"
+      ],
+      "rgb": [
+        182,
+        145,
+        109
+      ]
+    },
+    {
+      "name": "sky0",
+      "names": [
+        "sky0"
+      ],
+      "rgb": [
+        0,
+        0,
+        36
+      ]
+    },
+    {
+      "name": "sky1",
+      "names": [
+        "sky1"
+      ],
+      "rgb": [
+        0,
+        0,
+        72
+      ]
+    },
+    {
+      "name": "sky3",
+      "names": [
+        "sky3",
+        "jean2"
+      ],
+      "rgb": [
+        0,
+        72,
+        145
+      ]
+    },
+    {
+      "name": "grass0",
+      "names": [
+        "grass0"
+      ],
+      "rgb": [
+        0,
+        36,
+        0
+      ]
+    },
+    {
+      "name": "grass1",
+      "names": [
+        "grass1",
+        "glint0"
+      ],
+      "rgb": [
+        0,
+        72,
+        36
+      ]
+    },
+    {
+      "name": "grass2",
+      "names": [
+        "grass2"
+      ],
+      "rgb": [
+        0,
+        109,
+        36
+      ]
+    },
+    {
+      "name": "flannel",
+      "names": [
+        "flannel"
+      ],
+      "rgb": [
+        182,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "flannel2",
+      "names": [
+        "flannel2"
+      ],
+      "rgb": [
+        109,
+        0,
+        0
+      ]
+    },
+    {
+      "name": "flannel3",
+      "names": [
+        "flannel3"
+      ],
+      "rgb": [
+        72,
+        0,
+        36
+      ]
+    },
+    {
+      "name": "hskin",
+      "names": [
+        "hskin"
+      ],
+      "rgb": [
+        218,
+        145,
+        109
+      ]
+    },
+    {
+      "name": "hskin2",
+      "names": [
+        "hskin2"
+      ],
+      "rgb": [
+        182,
+        109,
+        72
+      ]
+    },
+    {
+      "name": "hskin0",
+      "names": [
+        "hskin0",
+        "rust"
+      ],
+      "rgb": [
+        145,
+        72,
+        36
+      ]
+    },
+    {
+      "name": "boot",
+      "names": [
+        "boot"
+      ],
+      "rgb": [
+        72,
+        36,
+        0
+      ]
+    },
+    {
+      "name": "boot2",
+      "names": [
+        "boot2"
+      ],
+      "rgb": [
+        36,
+        36,
+        0
+      ]
+    },
+    {
+      "name": "rust2",
+      "names": [
+        "rust2"
+      ],
+      "rgb": [
+        109,
+        36,
+        0
+      ]
+    },
+    {
+      "name": "tire",
+      "names": [
+        "tire"
+      ],
+      "rgb": [
+        36,
+        36,
+        36
+      ]
+    },
+    {
+      "name": "hub",
+      "names": [
+        "hub"
+      ],
+      "rgb": [
+        182,
+        182,
+        182
+      ]
+    },
+    {
+      "name": "glint",
+      "names": [
+        "glint"
+      ],
+      "rgb": [
+        36,
+        255,
+        109
+      ]
+    },
+    {
+      "name": "button",
+      "names": [
+        "button"
+      ],
+      "rgb": [
+        0,
+        255,
+        218
+      ]
+    },
+    {
+      "name": "dirt",
+      "names": [
+        "dirt"
+      ],
+      "rgb": [
+        72,
+        72,
+        36
+      ]
+    },
+    {
+      "name": "dirt2",
+      "names": [
+        "dirt2"
+      ],
+      "rgb": [
+        109,
+        109,
+        72
+      ]
+    },
+    {
+      "name": "teal",
+      "names": [
+        "teal"
+      ],
+      "rgb": [
+        36,
+        109,
+        109
+      ]
+    },
+    {
+      "name": "teal2",
+      "names": [
+        "teal2"
+      ],
+      "rgb": [
+        72,
+        145,
+        182
+      ]
+    },
+    {
+      "name": "lip2",
+      "names": [
+        "lip2"
+      ],
+      "rgb": [
+        109,
+        72,
+        109
+      ]
+    },
+    {
+      "name": "warm",
+      "names": [
+        "warm"
+      ],
+      "rgb": [
+        218,
+        182,
+        145
+      ]
+    },
+    {
+      "name": "starw",
+      "names": [
+        "starw"
+      ],
+      "rgb": [
+        255,
+        218,
+        218
+      ]
+    },
+    {
+      "name": "violet",
+      "names": [
+        "violet"
+      ],
+      "rgb": [
+        72,
+        36,
+        109
+      ]
+    },
+    {
+      "name": "framec",
+      "names": [
+        "framec"
+      ],
+      "rgb": [
+        182,
+        218,
+        255
+      ]
+    },
+    {
+      "name": "screen3",
+      "names": [
+        "screen3"
+      ],
+      "rgb": [
+        0,
+        182,
+        218
+      ]
+    },
+    {
+      "name": "bark",
+      "names": [
+        "bark"
+      ],
+      "rgb": [
+        109,
+        72,
+        36
+      ]
+    },
+    {
+      "name": "moss",
+      "names": [
+        "moss"
+      ],
+      "rgb": [
+        72,
+        109,
+        36
+      ]
+    }
+  ]
+}

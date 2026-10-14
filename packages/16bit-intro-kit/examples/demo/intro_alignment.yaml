@@ -1,0 +1,117 @@
+# Same film as intro.yaml, but the mouth line is merged from alignment.json.
+# HELLO (0.20-0.50) and THERE (0.55-1.60) join because the gap is under 0.35s.
+version: 1
+name: demo-alignment
+description: Demo vocals loaded from a WhisperX-style alignment.
+fps: 30
+width: 256
+height: 224
+palette: tg16
+
+audio:
+  file: audio/song.mp3
+  duration: 6.0
+  tail:
+    duration: 2.0
+    source: silence
+
+mouths:
+  bust:
+    closed: art/bust_closed.png
+    open: art/bust_open.png
+    patch:
+      image: art/mouth_open_patch.png
+      x: 120
+      y: 108
+
+vocals:
+  hold_frames: 4
+  alignment: alignment.json
+  gap: 0.35
+  mouth: true
+
+scenes:
+  - id: talk
+    type: still
+    start: 0.0
+    end: 2.0
+    cut: hard
+    mouth: bust
+  - id: walk
+    type: scroll
+    start: 2.0
+    end: 4.0
+    cut: hard
+    tile: art/corridor.png
+    tile_w: 96
+    scroll_px_per_s: 24
+    direction: left
+    sprite:
+      type: sprite
+      image: art/walker.png
+      x: 108
+      y: 140
+      bob_px: 2
+      bob_hz: 2
+  - id: lift
+    type: stack
+    start: 4.0
+    end: 6.0
+    cut: hard
+    layers:
+      - type: image
+        image: art/sky.png
+      - type: sprite
+        id: critter
+        frames:
+          - art/critter_0.png
+          - art/critter_1.png
+        x: 180
+        show: ["4.2", "6.0"]
+        cycle:
+          mode: loop
+          hold: 4
+        keys:
+          - { t: 0.2, y: 140 }
+          - { t: 1.8, y: 70, ease: smoothstep }
+        pop:
+          frames: 1
+          squash_h: 4
+          canvas_h: 6
+          paste_y: 2
+          y: 78
+          flash: { x: 4, y: 1, w: 6, h: 3, color: [255, 255, 255, 255] }
+      - type: sprite
+        id: ship
+        image: art/ship.png
+        x: 160
+        keys:
+          - { t: 0, y: 150 }
+          - { t: 1.4, y: 48, ease: smoothstep }
+  - id: title
+    type: title
+    start: 6.0
+    end: 8.0
+    cut: hard
+    background:
+      image: art/title_bg.png
+    text:
+      - text: DEMO
+        font: small
+        align: center
+        y: 36
+        scale: 4
+        gap: 2
+        color: [255, 255, 255]
+        outline: [0, 0, 72]
+    prompt:
+      text: PRESS ANY BUTTON TO START
+      font: small
+      align: center
+      y: 196
+      scale: 2
+      gap: 1
+      color: [0, 255, 218]
+      outline: [72, 72, 109]
+      on_seconds: 0.5
+      off_seconds: 0.5

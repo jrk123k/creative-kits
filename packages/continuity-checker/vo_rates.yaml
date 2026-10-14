@@ -1,0 +1,26 @@
+# Spoken-duration settings for vo-fit.
+# Syllables come from the lyric. This file is how fast they are spoken,
+# and how long each punctuation mark holds. Edit the numbers; the checker
+# does not need a code change.
+
+version: 1
+
+# About 4.5 syllables per second is a brisk read. Raise it if the read is
+# faster; lower it for a held, sung delivery.
+speaking_rate_syllables_per_second: 4.5
+
+# A line that fits, but with this many seconds or fewer to spare, is "tight".
+tight_margin_seconds: 0.40
+
+# Seconds added for each mark in the spoken line. A hyphen inside a word
+# (bing-dop) is not a pause. "..." and "…" are one ellipsis, not three periods.
+pauses:
+  comma: 0.20
+  semicolon: 0.30
+  colon: 0.25
+  period: 0.40
+  question: 0.45
+  excl_mark: 0.40
+  ellipsis: 0.50
+  emdash: 0.30
+  endash: 0.15

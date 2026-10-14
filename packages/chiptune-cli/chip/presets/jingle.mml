@@ -1,0 +1,28 @@
+; Four-bar jingle in C, 144 BPM. About 6.7 seconds.
+; Lead is a 25% pulse, harmony an organ fifth, bass a triangle.
+; E is a hat, F is a noise backbeat.
+@title Jingle
+@tempo 144
+@master 15 15
+
+A o5 v27 w pulse p15,13 q6 l8
+  e e g e a r g4
+  e e g e b r a4
+  g a g e f g a b
+  >c4 r8 d8 c4 r4
+B o4 v18 w organ p11,15 q8
+  l1 c c
+  l2 f g
+  l2 c r
+C o3 v24 w triangle p15,15 q7
+  l4 c c g c
+  c c g c
+  f f c g
+  g c c r
+E n1 nf20 v12 p10,12 q8
+  l8 [c r]16
+F n1 nf6 v18 p15,8 q4
+  l4 r c r c
+  r c r c
+  r c r c
+  r c r c

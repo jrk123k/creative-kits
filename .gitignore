@@ -1,0 +1,65 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+.venv/
+venv/
+dist/
+build/
+.mypy_cache/
+.eggs/
+
+# Node / Remotion
+node_modules/
+.remotion/
+npm-debug.log*
+yarn-error.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+credentials*.json
+**/secrets/**
+
+# Private scrub rule files (keep examples only)
+**/config/banned.*
+!**/config/banned.example.yaml
+
+# Outputs
+out/
+uploads/
+reports/
+/demos/
+*.csv.tmp
+
+# Packaging mirrors
+*_source.zip
+*_source_v*.zip
+*.zip
+
+# Large / generated media (bring your own)
+*.mp4
+*.webm
+*.mov
+*.mkv
+
+# Continuity reports
+continuity-report.md
+continuity-report.json
+
+# Private ops leakage
+cloud-ledger.csv
+**/paystubs/**
+**/steam*library*.csv
+!**/sample_library.csv

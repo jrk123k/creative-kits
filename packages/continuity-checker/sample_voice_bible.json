@@ -1,0 +1,101 @@
+{
+  "tool": "voice-bible-check",
+  "version": "2.0.0",
+  "drafts_dir": "samples/drafts",
+  "bible": "samples/crew-voice-bible/VOICE_BIBLE.md",
+  "bots": [
+    {
+      "bot": "Harbor",
+      "voice_id": "liora",
+      "status": "locked",
+      "stale_aliases": [],
+      "line": 7
+    },
+    {
+      "bot": "Ledger",
+      "voice_id": "ara",
+      "status": "locked",
+      "stale_aliases": [
+        "carina"
+      ],
+      "line": 8
+    },
+    {
+      "bot": "Quill",
+      "voice_id": "luna",
+      "status": "locked",
+      "stale_aliases": [
+        "lumen"
+      ],
+      "line": 9
+    },
+    {
+      "bot": "Lens",
+      "voice_id": "celeste",
+      "status": "locked",
+      "stale_aliases": [
+        "altair"
+      ],
+      "line": 10
+    },
+    {
+      "bot": "Stack",
+      "voice_id": "iris",
+      "status": "locked",
+      "stale_aliases": [
+        "sirius"
+      ],
+      "line": 11
+    },
+    {
+      "bot": "Index",
+      "voice_id": "naksh",
+      "status": "locked",
+      "stale_aliases": [],
+      "line": 12
+    },
+    {
+      "bot": "Signal",
+      "voice_id": "vega",
+      "status": "locked",
+      "stale_aliases": [],
+      "line": 13
+    },
+    {
+      "bot": "Ember",
+      "voice_id": "ursa",
+      "status": "proposed",
+      "stale_aliases": [],
+      "line": 14
+    }
+  ],
+  "summary": {
+    "files_scanned": 2,
+    "files": [
+      "crew-tour-idea/IDEA.md",
+      "stale-alias-example/IDEA.md"
+    ],
+    "bots_loaded": 8,
+    "findings": 1,
+    "by_severity": {
+      "error": 1,
+      "warning": 0,
+      "info": 0
+    }
+  },
+  "findings": [
+    {
+      "severity": "error",
+      "file": "stale-alias-example/IDEA.md",
+      "line": 3,
+      "kind": "stale_alias",
+      "speaker": "Ledger",
+      "bot": "Ledger",
+      "voice_in_draft": "carina",
+      "locked_voice_id": "ara",
+      "message": "Ledger is listed as carina, a stale alias. Locked voiceId is ara.",
+      "snippet": "This draft still lists Ledger as 'carina'.",
+      "suggested_fix": "Replace carina with ara."
+    }
+  ]
+}

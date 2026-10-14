@@ -1,0 +1,34 @@
+# Final chorus: three eras side by side.
+output:
+  width: 1920
+  height: 1080
+  fps: 24
+  duration: 8
+
+layout: triptych
+
+divider:
+  px: 8
+  color: "101820"
+
+labels:
+  show: true
+  size: 36
+  position: bottom
+
+audio:
+  from: panel
+  index: 1
+
+panels:
+  - src: clips/then.mp4
+    label: "1984"
+    look: c64
+    dither: floyd
+    palette: pepto
+  - src: clips/now.mp4
+    label: "2026"
+    look: none
+  - src: clips/future.mp4
+    label: "FUTURE"
+    look: crt
